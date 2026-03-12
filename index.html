@@ -442,25 +442,33 @@
 
     .skills-tabs {
       display: flex;
-      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+      gap: .5rem;
       margin-bottom: 3rem;
     }
 
     .skills-tab {
-      padding: .9rem 2rem;
-      font-size: .78rem;
+      padding: .55rem 1.5rem;
+      font-size: .72rem;
       letter-spacing: .12em;
       text-transform: uppercase;
+      font-weight: 500;
       color: var(--muted);
       cursor: pointer;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-      transition: all .2s;
+      border: 1.5px solid var(--line);
+      background: transparent;
+      transition: all .22s var(--ease);
+    }
+
+    .skills-tab:hover {
+      border-color: var(--ink);
+      color: var(--ink);
     }
 
     .skills-tab.active {
-      color: var(--ink);
-      border-bottom-color: var(--accent);
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--white);
     }
 
     .skills-pane {
@@ -495,10 +503,6 @@
       background: var(--accent);
     }
 
-    .skill-icon {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
 
     .skill-name {
       font-family: var(--serif);
@@ -795,8 +799,8 @@
     <div class="nav-logo">Ingrid Gonçalves · QA</div>
     <ul class="nav-links">
       <li><a href="#sobre">About</a></li>
-      <li><a href="#experiencia">Experience</a></li>
       <li><a href="#habilidades">Skills</a></li>
+      <li><a href="#experiencia">Experience</a></li>
       <li><a href="#curriculo">Resume</a></li>
       <li><a href="#contato">Contact</a></li>
     </ul>
@@ -894,10 +898,382 @@
     </div>
   </section>
 
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <div class="section-header reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Skills & Frameworks</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-tabs reveal">
+      <button class="skills-tab active" data-tab="back">Back-end</button>
+      <button class="skills-tab" data-tab="front">Front-end</button>
+      <button class="skills-tab" data-tab="mobile">Mobile</button>
+      <button class="skills-tab" data-tab="tools">Tools</button>
+      <button class="skills-tab" data-tab="ai">AI Tools</button>
+      <button class="skills-tab" data-tab="testing">Testing Types</button>
+    </div>
+
+    <div class="skills-pane active" id="pane-back">
+      <div class="skill-card">
+        <div class="skill-name">Karate DSL</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Contract Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">REST Assured</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:80%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Integration Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Postman / Insomnia / Yaak</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">JSON / XML</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Swagger</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Jenkins / CI/CD Pipelines</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">SQL</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:88%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Maven / Gradle</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:72%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-pane" id="pane-front">
+      <div class="skill-card">
+        <div class="skill-name">Cypress</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">JavaScript (test automation)</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Selenium</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Cucumber (BDD)</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:75%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">HTML / CSS (basic)</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:75%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Browser DevTools</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:88%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Chromatic (Visual Testing)</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:68%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-pane" id="pane-mobile">
+      <div class="skill-card">
+        <div class="skill-name">Android Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">iOS Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Emulators & Real Devices</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Java / JavaScript</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Linux</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:72%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-pane" id="pane-tools">
+      <div class="skill-card">
+        <div class="skill-name">JIRA</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">QASE</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Linear.app</div>
+        <div class="skill-level">Basic</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:40%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Confluence</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Grafana / Dynatrace</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:68%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">PostHog</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:60%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Customer.io</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:60%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">GitHub</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">VS Code / IntelliJ</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Docker / Kubernetes</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:68%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Tray.io (iPaaS)</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:68%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">DBeaver</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:88%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">JMeter</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:68%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-pane" id="pane-ai">
+      <div class="skill-card">
+        <div class="skill-name">Claude</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Cursor</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">GitHub Copilot</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:70%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">GPT-5</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:70%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Gemini</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:65%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-pane" id="pane-testing">
+      <div class="skill-card">
+        <div class="skill-name">Regression Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Black-box Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:95%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">White-box Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Acceptance Testing (UAT)</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:90%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Mutation Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:88%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Performance Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:85%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Smoke Testing</div>
+        <div class="skill-level">Intermediate</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:75%"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Usability Testing</div>
+        <div class="skill-level">Advanced</div>
+        <div class="skill-bar">
+          <div class="skill-bar-fill" style="width:82%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+
   <!-- EXPERIÊNCIA -->
   <section id="experiencia">
     <div class="section-header reveal">
-      <span class="section-num">02</span>
+      <span class="section-num">03</span>
       <h2 class="section-title">Experience</h2>
       <div class="section-line"></div>
     </div>
@@ -1046,250 +1422,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- HABILIDADES -->
-  <section id="habilidades">
-    <div class="section-header reveal">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Skills & Frameworks</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="skills-tabs reveal">
-      <button class="skills-tab active" data-tab="back">Back-end</button>
-      <button class="skills-tab" data-tab="front">Front-end</button>
-      <button class="skills-tab" data-tab="mobile">Mobile</button>
-      <button class="skills-tab" data-tab="tools">Tools</button>
-    </div>
-
-    <div class="skills-pane active" id="pane-back">
-      <div class="skill-card">
-        <div class="skill-icon">🥋</div>
-        <div class="skill-name">Karate DSL</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📄</div>
-        <div class="skill-name">Contract Testing</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">☕</div>
-        <div class="skill-name">REST Assured</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:80%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🔗</div>
-        <div class="skill-name">Integration Testing</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:95%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🚀</div>
-        <div class="skill-name">Postman / Insomnia / Yaak</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:92%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📋</div>
-        <div class="skill-name">JSON / XML</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:92%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📖</div>
-        <div class="skill-name">Swagger</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🔄</div>
-        <div class="skill-name">Jenkins / CI/CD Pipelines</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:85%"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-pane" id="pane-front">
-      <div class="skill-card">
-        <div class="skill-icon">🌲</div>
-        <div class="skill-name">Cypress</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:92%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚡</div>
-        <div class="skill-name">JavaScript (test automation)</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:95%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">Selenium</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:85%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🥒</div>
-        <div class="skill-name">Cucumber (BDD)</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:75%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🎨</div>
-        <div class="skill-name">HTML / CSS (basic)</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:75%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🛠️</div>
-        <div class="skill-name">Browser DevTools</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:88%"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-pane" id="pane-mobile">
-      <div class="skill-card">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">Android Testing</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🍎</div>
-        <div class="skill-name">iOS Testing</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📱</div>
-        <div class="skill-name">Emulators & Real Devices</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:95%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">☕</div>
-        <div class="skill-name">Java / JavaScript</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🐧</div>
-        <div class="skill-name">Linux</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:72%"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skills-pane" id="pane-tools">
-      <div class="skill-card">
-        <div class="skill-icon">📊</div>
-        <div class="skill-name">JIRA / QASE</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:92%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📡</div>
-        <div class="skill-name">Grafana / Dynatrace</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:68%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📈</div>
-        <div class="skill-name">PostHog / Customer.io</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:60%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🐙</div>
-        <div class="skill-name">GitHub / IntelliJ / VS Code</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:90%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🐳</div>
-        <div class="skill-name">Docker / Kubernetes</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:68%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">⚙️</div>
-        <div class="skill-name">Tray.io (iPaaS)</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:68%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">✨</div>
-        <div class="skill-name">Cursor (AI-assisted dev)</div>
-        <div class="skill-level">Advanced</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:85%"></div>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">Claude (AI-assisted analysis)</div>
-        <div class="skill-level">Intermediate</div>
-        <div class="skill-bar">
-          <div class="skill-bar-fill" style="width:68%"></div>
-        </div>
-      </div>
-    </div>
-  </section>
   </section>
 
   <!-- CURRÍCULO -->
